@@ -2,20 +2,110 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+@keyframes clockwiseBorder {
+    0% {
+        border-color: transparent;
+        transform: scale(1);
+    }
+    12.5% {
+        border-top-color: rgb(57, 238, 21);
+        transform: scale(1.02);
+    }
+    25% {
+        border-top-color: transparent;
+        border-right-color: rgb(57, 238, 21);
+        transform: scale(1.02);
+    }
+    37.5% {
+        border-right-color: transparent;
+        border-bottom-color: rgb(57, 238, 21);
+        transform: scale(1.04);
+    }
+    50% {
+        border-bottom-color: transparent;
+        border-left-color: rgb(57, 238, 21);
+        transform: scale(1.06);
+    }
+    62.5% {
+        border-left-color: transparent;
+        border-top-color: rgb(57, 238, 21);
+        transform: scale(1.04);
+    }
+    75% {
+        border-top-color: rgb(57, 238, 21);
+        border-right-color: rgb(57, 238, 21);
+        border-bottom-color: rgb(57, 238, 21);
+        border-left-color: rgb(57, 238, 21);
+        transform: scale(1.08);
+    }
+    100% {
+        border-color: rgb(57, 238, 21);
+        transform: scale(1.1);
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.bar {
+    position: relative; /* Ensure the bar is the position context */
+    overflow: hidden; /* Prevent overflow from the border */
+}
+
+.border-animation {
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0.75rem;
+    pointer-events: none;
+    transition: transform 0.5s ease, border-color 0.5s ease;
+}
+
+.skills .container .bar:hover .border-animation {
+    animation: clockwiseBorder 3s ease forwards;
+}
+
+
+.vertical-timeline::before {
+    /* this is the vertical line */
+  
+    background: #1E40AF !important;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* .experience .timeline {
+    position: relative;
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+  
+  .experience .timeline .container {
+    padding: 10px 20px; 
+    position: relative;
+    width: 100%;
+  }
+  
+  .experience .left {
+    float: left;
+    clear: both; 
+  }
+  
+  .experience .right {
+    float: right;
+    clear: both;
+  }
+ 
+  .experience .container::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -12.5px;
+    background-color: rgb(255, 255, 255);
+    border: 4px solid #ff9f55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 100;
+  }
+   */
