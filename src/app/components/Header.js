@@ -1,5 +1,7 @@
-'use client'
+'use client';
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image'; // Import the Next.js Image component
+import Link from 'next/link'; // Import the Link component from Next.js
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faAngleUp } from '@fortawesome/free-solid-svg-icons';
 
@@ -11,6 +13,12 @@ const Header = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      console.log(window.innerWidth); // Example usage of window
+    }
+  }, []);
 
   const handleScroll = () => {
     const sections = ['home', 'about', 'skills', 'education', 'work', 'experience', 'contact'];
@@ -44,10 +52,10 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between md:justify-evenly p-6 h-16 bg-[#fff] shadow-md transition-all duration-200">
-      <a href="/" className="text-xl font-bold text-gray-800 hover:text-orange-500 flex items-center space-x-2 transition duration-200 ease-in-out">
-        <img className='w-8' src="/logo.png" alt="Logo" />
+      <Link href="/" className="text-xl font-bold text-gray-800 hover:text-orange-500 flex items-center space-x-2 transition duration-200 ease-in-out">
+        <Image className='w-8' src="/logo.png" alt="Logo" width={32} height={32} />
         <span>Saurabh</span>
-      </a>
+      </Link>
 
       {/* Hamburger icon for mobile */}
       <div onClick={toggleMenu} className="text-2xl cursor-pointer md:hidden">
@@ -66,13 +74,13 @@ const Header = () => {
         <ul className="flex flex-col p-4 md:flex-row md:space-x-6 md:space-y-0 text-center">
           {['Home', 'About', 'Skills', 'Education', 'Work', 'Experience', 'Contact'].map((section) => (
             <li key={section} className='p-4 px-8 md:p-0'>
-              <a 
+              <Link 
                 href={`#${section.toLowerCase()}`}
                 className={`text-lg font-semibold ${activeSection === section.toLowerCase() ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-800'} hover:text-blue-600 transition duration-200 ease-in-out`}
                 onClick={() => setIsOpen(false)} // Close menu on click
               >
                 {section}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

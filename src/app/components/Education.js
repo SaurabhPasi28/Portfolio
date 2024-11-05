@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'; // Import Image from Next.js
 
 const Education = () => {
   return (
@@ -14,7 +15,14 @@ const Education = () => {
       <div className="box-container flex flex-col items-center w-[80%]">
         <div className="box flex flex-row w-4/5 bg-white shadow-md rounded-lg overflow-hidden my-4 transform transition-transform duration-300 hover:scale-105">
           <div className="image flex-shrink-0 w-1/3">
-            <img draggable="false" src="https://img.collegepravesh.com/2023/03/IIIT-Una.jpg" alt="College" className="object-cover w-full h-full" />
+            <Image
+              src="/College.jpg"
+              alt="College"
+              className="object-cover w-full h-full"
+              width={400} // Set appropriate width
+              height={300} // Set appropriate height
+              draggable="false"
+            />
           </div>
           <div className="content flex flex-col p-4 w-2/3">
             <h3 className="text-2xl text-[#012970] font-semibold mb-2">Bachelor of Engineering in Computer Science</h3>
@@ -25,7 +33,14 @@ const Education = () => {
 
         <div className="box flex flex-row w-4/5 bg-white shadow-md rounded-lg overflow-hidden my-4 transform transition-transform duration-300 hover:scale-105">
           <div className="image flex-shrink-0 w-1/3">
-            <img draggable="false" src="https://bssvin.wordpress.com/wp-content/uploads/2023/05/cropped-cropped-timthumb.jpg" alt="School" className="object-cover w-full h-full" />
+            <Image
+              src="/College.jpg"
+              alt="School"
+              className="object-cover w-full h-full"
+              width={400} // Set appropriate width
+              height={300} // Set appropriate height
+              draggable="false"
+            />
           </div>
           <div className="content flex flex-col p-4 w-2/3">
             <h3 className="text-2xl text-[#012970] font-semibold mb-2">PCM</h3>

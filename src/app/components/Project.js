@@ -1,5 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const Project = () => {
   const [projects, setProjects] = useState([]);
@@ -31,7 +33,6 @@ const Project = () => {
         origin: 'top',
         duration: 1000,
         easing: 'ease-out',
-        // interval: 100,
         reset: true // For staggered effect
       });
     };
@@ -52,10 +53,12 @@ const Project = () => {
           >
             {/* Image Container */}
             <div className="relative w-full h-64 overflow-hidden">
-              <img
+              <Image
                 src={project.image}
                 alt={project.name}
                 className="w-full h-full object-cover"
+                layout="fill" // Use layout fill to cover the container
+                objectFit="cover" // Ensure the image covers the container properly
               />
 
               {/* Overlay with Project Name and Details */}
@@ -63,22 +66,24 @@ const Project = () => {
                 <h3 className="text-lg font-semibold text-center bg-yellow-300">{project.name}</h3>
                 <p className="text-sm p-2">{project.desc}</p>
                 <div className="flex justify-between">
-                  <a
+                  <Link
                     href={project.links.view}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-blue-700 px-2 py-2 m-2 rounded hover:bg-blue-600 transition"
                   >
-                    <i className="fas fa-eye"></i> View
-                  </a>
-                  <a
+                    <span>
+                      <i className="fas fa-eye"></i> View
+                    </span>
+                  </Link>
+                  <Link
                     href={project.links.code}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-blue-700 px-2 py-2 m-2 rounded hover:bg-blue-600 transition"
                   >
-                    Code <i className="fas fa-code"></i>
-                  </a>
+                    <span>Code <i className="fas fa-code"></i></span>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -86,12 +91,12 @@ const Project = () => {
         ))}
       </div>
       <div className="flex justify-center mt-8">
-        <a
+        <Link
           href="/projects"
           className="text-white font-bold border-2 border-white px-6 py-2 rounded hover:bg-white hover:text-black transition"
         >
           View All <i className="fas fa-arrow-right ml-2"></i>
-        </a>
+        </Link>
       </div>
     </section>
   );

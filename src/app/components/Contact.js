@@ -1,7 +1,8 @@
-'use client'
+'use client';
 import React, { useRef, useEffect } from 'react';
 import { FaUser, FaEnvelope, FaPhoneAlt, FaCommentDots, FaPaperPlane, FaHeadset } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
+import Image from 'next/image'; // Import Image from Next.js
 
 const Contact = () => {
   const form = useRef();
@@ -55,10 +56,12 @@ const Contact = () => {
       <div className="container max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8">
         <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
           <div className="w-full md:w-1/2 flex justify-center md:justify-start">
-            <img
-              src="contact.png"
+            <Image
+              src="/contact.png" // Ensure this image is in the public directory
               alt="Contact"
               className="max-w-full md:max-w-sm h-80 object-cover rounded-md"
+              width={300} // Set appropriate width
+              height={300} // Set appropriate height
               draggable="false"
             />
           </div>

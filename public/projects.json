@@ -2,7 +2,7 @@
   {
     "name": "Watch-With-Buddy",
     "desc": "Fully fledged android CRUD app based on different design patterns. Built using Java, XML, SQLite, Firebase, RoomDB, MVVM.",
-    "image": "https://w2g-community.b-cdn.net/uploads/default/original/3X/e/6/e6515b1e0b6b3d8d44bd7c069e29b1eee7b5266d.jpeg",
+    "image": "/College.jpg",
     "category": "Web Developement",
     "links": {
       "view": "",
@@ -12,7 +12,7 @@
   {
     "name": "SPPU Engg Prep",
     "desc": "All in one SPPU Engineering resources. Built using Java, XML and Firebase.",
-    "image": "sppuprepandroid",
+    "image": "/College.jpg",
     "category": "android",
     "links": {
       "view": "",
@@ -22,7 +22,7 @@
   {
     "name": "NewsBox Android",
     "desc": "Native android app built using Java, XML. Retrofit & Glide dependencies. Provides different category news.",
-    "image": "newsboxandroid",
+    "image": "/College.jpg",
     "category": "android",
     "links": {
       "view": "",

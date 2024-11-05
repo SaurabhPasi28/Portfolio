@@ -1,8 +1,9 @@
-'use client'
+'use client';
 import { useEffect } from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { FaBriefcase, FaArrowRight } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Experience = () => {
   useEffect(() => {
@@ -16,7 +17,7 @@ const Experience = () => {
         duration: 1000,
         easing: 'ease-out',
         interval: 100, 
-        reset:true,// For staggered effect
+        reset: true, // For staggered effect
       });
     };
 
@@ -25,10 +26,10 @@ const Experience = () => {
 
   return (
     <section id="experience" className="bg-gray-50 py-10">
-      {/* <h2 className="text-center text-3xl font-bold text-blue-800 mb-8 flex items-center justify-center gap-3">
+      <h2 className="text-center text-3xl font-bold text-blue-800 mb-8 flex items-center justify-center gap-3">
         <FaBriefcase className="text-blue-600" />
         Experience
-      </h2> */}
+      </h2>
 
       <VerticalTimeline>
         <VerticalTimelineElement
@@ -63,10 +64,10 @@ const Experience = () => {
       </VerticalTimeline>
 
       <div className="text-center mt-8">
-        <a href="/experience" className="inline-flex items-center text-lg font-semibold text-white bg-blue-600 hover:bg-blue-800 transition duration-200 py-3 px-6 rounded-full shadow-lg">
+        <Link href="/experience" className="inline-flex items-center text-lg font-semibold text-white bg-blue-600 hover:bg-blue-800 transition duration-200 py-3 px-6 rounded-full shadow-lg">
           <span>View All</span>
           <FaArrowRight className="ml-2" />
-        </a>
+        </Link>
       </div>
     </section>
   );
