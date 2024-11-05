@@ -43,7 +43,7 @@ const About = () => {
 
         {/* Content Section */}
         <div className="about-content max-w-[40%] lg:w-2/3">
-          <h3 className="content text-2xl font-semibold text-gray-900 mb-4">I'm Saurabh</h3>
+          <h3 className="content text-2xl font-semibold text-gray-900 mb-4">I m Saurabh</h3>
           <span className="content block text-lg text-blue-800 font-semibold mb-4">Full Stack Developer</span>
           <p className="content text-gray-700 mb-6 font-semibold text-justify">
             I am a Full-Stack developer based in Pune, India. I am an Information Technology undergraduate from SPPU. I am very passionate about improving my coding skills & developing applications & websites. I build WebApps and Websites using the MERN Stack. Working for myself to improve my skills. Love to build Full-Stack clones.
