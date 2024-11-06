@@ -2,7 +2,7 @@
 import React, { useRef, useEffect } from 'react';
 import { FaUser, FaEnvelope, FaPhoneAlt, FaCommentDots, FaPaperPlane, FaHeadset } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
-import Image from 'next/image'; // Import Image from Next.js
+import Image from 'next/image';
 
 const Contact = () => {
   const form = useRef();
@@ -32,7 +32,7 @@ const Contact = () => {
         origin: 'top',
         duration: 1000,
         easing: 'ease-out',
-        reset: true, // This allows repeated reveals on scroll
+        reset: true,
       });
       ScrollReveal().reveal('.form-group', {
         delay: 300,
@@ -57,11 +57,11 @@ const Contact = () => {
         <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
           <div className="w-full md:w-1/2 flex justify-center md:justify-start">
             <Image
-              src="/contact.png" // Ensure this image is in the public directory
+              src="/contact.png"
               alt="Contact"
               className="max-w-full md:max-w-sm h-80 object-cover rounded-md"
-              width={300} // Set appropriate width
-              height={300} // Set appropriate height
+              width={300}
+              height={300}
               draggable="false"
             />
           </div>

@@ -51,18 +51,15 @@ const Project = () => {
             key={index}
             className="project-card relative bg-yellow-400 rounded-lg shadow-lg overflow-hidden w-80 transform transition-transform hover:scale-105 group sd:w-72"
           >
-            {/* Image Container */}
             <div className="relative w-full h-64 overflow-hidden">
               <Image
                 src={project.image}
                 alt={project.name}
                 className="w-full h-full object-cover"
-                layout="fill" // Use layout fill to cover the container
-                objectFit="cover" // Ensure the image covers the container properly
+                layout="fill"
+                objectFit="cover"
               />
-
-              {/* Overlay with Project Name and Details */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-70 text-white transition-transform transform translate-y-full group-hover:translate-y-0">
+              <div className="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-70 text-white transition-transform transform translate-y-3/4 group-hover:translate-y-0">
                 <h3 className="text-lg font-semibold text-center bg-yellow-300">{project.name}</h3>
                 <p className="text-sm p-2">{project.desc}</p>
                 <div className="flex justify-between">

@@ -16,7 +16,7 @@ const Homepage = () => {
     const loadTyped = async () => {
       const Typed = (await import('typed.js')).default;
       new Typed('.typing-text', {
-        strings: ['Web Developer', 'Designer', 'Creator', 'Programming'],
+        strings: ['Web Developer', 'Designer', 'Creator', 'Programmer'],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true,
@@ -63,7 +63,7 @@ const Homepage = () => {
           I&#39;m Saurabh <span className="text-orange-600">Pasi</span>
         </h2>
         <p className="text-2xl font-semibold text-black">
-          I am into <span className="typing-text text-red-600"></span>
+          I am a <span className="typing-text text-red-600"></span>
         </p>
         <Link href="#about" className="btn mt-6 inline-flex items-center py-3 px-4 text-lg font-semibold text-white bg-blue-800 hover:bg-blue-700 rounded-full shadow-md transition-transform transform hover:scale-105">
           <span>About Me</span>
@@ -113,11 +113,11 @@ const Homepage = () => {
 
       <div className="image min-w-60 h-96 mt-20 z-10 md:min-w-80 md:mt-28">
         <Image
-          src="/profile1.jpg" // Ensure the image is in the public folder
+          src="/profile1.jpg"
           alt="Profile"
           className="tilt w-full h-full object-cover rounded-full shadow-lg hover:shadow-2xl transition-shadow"
-          width={300} // Specify width
-          height={300} // Specify height
+          width={300}
+          height={300}
         />
       </div>
     </section>

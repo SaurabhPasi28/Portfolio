@@ -28,13 +28,11 @@ const Skills = () => {
                                     src={skill.icon} 
                                     alt={skill.name} 
                                     className="w-12 h-12 group-hover:scale-125 transition-transform duration-300" 
-                                    width={48} // Set the width to match w-12
-                                    height={48} // Set the height to match h-12
+                                    width={48}
+                                    height={48}
                                 />
                                 <span className="text-white text-xl font-medium group-hover:text-yellow-400">{skill.name}</span>
                             </div>
-
-                            {/* Border animation */}
                             <div className="absolute inset-0 rounded-lg border-animation group-hover:animate-clockwiseBorder"></div>
                         </div>
                     ))}

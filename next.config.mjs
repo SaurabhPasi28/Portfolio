@@ -1,9 +1,19 @@
-/** @type {import('next').NextConfig} */
+/* @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['img.icons8.com', 'upload.wikimedia.org'], // Combine domains into one array
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'img.icons8.com',
+                pathname: '/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'upload.wikimedia.org',
+                pathname: '/**',
+            },
+        ],
     },
-    // Add other configurations if needed
 };
 
 export default nextConfig;

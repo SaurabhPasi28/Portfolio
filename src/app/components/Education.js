@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image'; // Import Image from Next.js
+import Image from 'next/image';
 
 const Education = () => {
   return (
@@ -19,8 +19,8 @@ const Education = () => {
               src="/College.jpg"
               alt="College"
               className="object-cover w-full h-full"
-              width={400} // Set appropriate width
-              height={300} // Set appropriate height
+              width={400}
+              height={300}
               draggable="false"
             />
           </div>
@@ -37,8 +37,8 @@ const Education = () => {
               src="/College.jpg"
               alt="School"
               className="object-cover w-full h-full"
-              width={400} // Set appropriate width
-              height={300} // Set appropriate height
+              width={400}
+              height={300}
               draggable="false"
             />
           </div>

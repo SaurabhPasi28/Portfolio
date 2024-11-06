@@ -16,7 +16,7 @@ const Header = () => {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      console.log(window.innerWidth); // Example usage of window
+      console.log(window.innerWidth);
     }
   }, []);
 
@@ -56,16 +56,12 @@ const Header = () => {
         <Image className='w-8' src="/logo.png" alt="Logo" width={32} height={32} />
         <span>Saurabh</span>
       </Link>
-
-      {/* Hamburger icon for mobile */}
       <div onClick={toggleMenu} className="text-2xl cursor-pointer md:hidden">
         <FontAwesomeIcon
           icon={isOpen ? faTimes : faBars}
           className={`transform transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`}
         />
       </div>
-
-      {/* Navigation Menu */}
       <nav
         className={`fixed top-16 right-0 h-fit w-fit bg-[#fff] flex items-center justify-center transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full '
@@ -77,7 +73,7 @@ const Header = () => {
               <Link 
                 href={`#${section.toLowerCase()}`}
                 className={`text-lg font-semibold ${activeSection === section.toLowerCase() ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-800'} hover:text-blue-600 transition duration-200 ease-in-out`}
-                onClick={() => setIsOpen(false)} // Close menu on click
+                onClick={() => setIsOpen(false)}
               >
                 {section}
               </Link>
@@ -85,8 +81,6 @@ const Header = () => {
           ))}
         </ul>
       </nav>
-
-      {/* Scroll-to-Top Button */}
       {showScrollTop && (
         <button
           onClick={scrollToTop}

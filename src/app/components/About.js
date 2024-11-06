@@ -1,4 +1,4 @@
-'use client'; // Ensures this component runs only in the client environment
+'use client';
 
 import React, { useEffect } from 'react';
 import { IoIosArrowDroprightCircle } from "react-icons/io";
@@ -9,7 +9,7 @@ import Image from 'next/image';
 const About = () => {
   useEffect(() => {
     const loadScrollReveal = async () => {
-      const ScrollReveal = (await import('scrollreveal')).default; // Dynamic import
+      const ScrollReveal = (await import('scrollreveal')).default;
       ScrollReveal().reveal('.about-content, .about-image, .content', {
         origin: 'top',
         distance: '60px',
@@ -20,7 +20,7 @@ const About = () => {
       });
     };
 
-    loadScrollReveal(); // Call the function to load ScrollReveal
+    loadScrollReveal();
   }, []);
 
   return (
@@ -30,23 +30,21 @@ const About = () => {
       </h2>
 
       <div className="flex flex-wrap items-center justify-around lg:p-10">
-        {/* Image Section */}
         <div className="about-image w-full lg:w-1/3 flex justify-center mb-8 lg:mb-8">
           <Image
-            src="/profile1.jpg" // Ensure the image is in the public directory
+            src="/profile1.jpg"
             alt="Profile"
             className="rounded-lg shadow-lg w-72 h-auto transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl"
-            width={288} // Set appropriate width
-            height={288} // Set appropriate height
+            width={288}
+            height={288}
           />
         </div>
 
-        {/* Content Section */}
         <div className="about-content max-w-[80%] md:max-w-[65%] lg:w-2/3">
-          <h3 className="content text-2xl font-semibold text-gray-900 mb-4">I m Saurabh</h3>
+          <h3 className="content text-2xl font-semibold text-gray-900 mb-4">I&#39;m Saurabh</h3>
           <span className="content block text-lg text-blue-800 font-semibold mb-4">Full Stack Developer</span>
           <p className="content text-gray-700 mb-6 font-semibold text-justify">
-            I am a Full-Stack developer based in Pune, India. I am an Information Technology undergraduate from SPPU. I am very passionate about improving my coding skills & developing applications & websites. I build WebApps and Websites using the MERN Stack. Working for myself to improve my skills. Love to build Full-Stack clones.
+            I am a Full-Stack developer based in Jaunpur, India. I am a Computer Science Engineering undergraduate from IIIT Una. I am very passionate about improving my coding skills & developing websites. I build Websites using the MERN Stack. Working for myself to improve my skills. 
           </p>
 
           <div className="box-container flex flex-wrap gap-6 font-semibold">
@@ -60,7 +58,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* Resume Button */}
           <div className="mt-8">
             <Link
               href="https://drive.google.com/file/d/14g4Vzb56k0xe62314t98OQfudNqRqfFL/view?usp=sharing"

@@ -17,7 +17,7 @@ const Experience = () => {
         duration: 1000,
         easing: 'ease-out',
         interval: 100, 
-        reset: true, // For staggered effect
+        reset: true,
       });
     };
 
