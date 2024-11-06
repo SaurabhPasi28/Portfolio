@@ -60,7 +60,7 @@ const Homepage = () => {
       <div className="content  z-10 mt-20 md:mt-28">
         <h2 className="font-extrabold text-blue-900 text-4xl mb-4 md:text-5xl ">
           <p className='mb-4'>Hi There,</p>
-          I'm Saurabh <span className="text-orange-600">Pasi</span>
+          I&#39;m Saurabh <span className="text-orange-600">Pasi</span>
         </h2>
         <p className="text-2xl font-semibold text-black">
           I am into <span className="typing-text text-red-600"></span>
