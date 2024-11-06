@@ -29,12 +29,12 @@ const Skills = () => {
       }, [skills]);
 
     return (
-        <section className="skills relative bg-gradient-to-r from-indigo-800 via-purple-700 to-pink-600 py-5" id="skills">
+        <section className="skills relative bg-gradient-to-r from-indigo-800 via-purple-700 to-pink-600 p-2 md:p-8" id="skills">
             <h2 className="text-white text-4xl text-center font-bold mb-8">
                 Skills & <span className="text-yellow-300">Abilities</span>
             </h2>
-            <div className="mx-auto px-6 sm:px-10 md:px-16 lg:px-20 bg-opacity-60 bg-[#fff] rounded-3xl shadow-lg py-8">
-                <div className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            <div className="mx-auto px-4 sm:px-10 md:px-16 lg:px-20 bg-opacity-60 bg-[#fff] rounded-3xl shadow-lg py-8">
+                <div className=" grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 md:gap-8">
                     {skills.map((skill, index) => (
                         <div 
                             key={index} 

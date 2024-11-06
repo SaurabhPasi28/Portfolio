@@ -10,19 +10,11 @@ const Header = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [showScrollTop, setShowScrollTop] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      console.log(window.innerWidth);
-    }
-  }, []);
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   const handleScroll = () => {
     const sections = ['home', 'about', 'skills', 'education', 'work', 'experience', 'contact'];
-    let scrollPosition = window.scrollY;
+    const scrollPosition = window.scrollY;
 
     sections.forEach((section) => {
       const sectionElement = document.getElementById(section);
@@ -30,13 +22,26 @@ const Header = () => {
         const sectionTop = sectionElement.offsetTop;
         const sectionHeight = sectionElement.offsetHeight;
 
-        if (scrollPosition >= sectionTop) {
+        // Update active section if within view
+        if (scrollPosition >= sectionTop - sectionHeight / 3) {
           setActiveSection(section);
         }
       }
     });
 
+    // Show scroll-to-top button if scrolled down 60 pixels
     setShowScrollTop(scrollPosition > 60);
+  };
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const yOffset = -80; // Offset for fixed header
+      const yPosition = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: yPosition, behavior: 'smooth' });
+    }
+    setIsOpen(false); // Close menu after click
+    setActiveSection(sectionId);
   };
 
   const scrollToTop = () => {
@@ -45,15 +50,13 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between md:justify-evenly p-6 h-16 bg-[#fff] shadow-md transition-all duration-200">
       <Link href="/" className="text-xl font-bold text-gray-800 hover:text-orange-500 flex items-center space-x-2 transition duration-200 ease-in-out">
-        <Image className='w-8' src="/logo.png" alt="Logo" width={32} height={32} />
+        <Image className="w-8" src="/logo.png" alt="Logo" width={32} height={32} />
         <span>Saurabh</span>
       </Link>
       <div onClick={toggleMenu} className="text-2xl cursor-pointer md:hidden">
@@ -69,14 +72,15 @@ const Header = () => {
       >
         <ul className="flex flex-col p-4 md:flex-row md:space-x-6 md:space-y-0 text-center">
           {['Home', 'About', 'Skills', 'Education', 'Work', 'Experience', 'Contact'].map((section) => (
-            <li key={section} className='p-4 px-8 md:p-0'>
-              <Link 
-                href={`#${section.toLowerCase()}`}
-                className={`text-lg font-semibold ${activeSection === section.toLowerCase() ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-800'} hover:text-blue-600 transition duration-200 ease-in-out`}
-                onClick={() => setIsOpen(false)}
+            <li key={section} className="p-4 px-8 md:p-0">
+              <button
+                onClick={() => scrollToSection(section.toLowerCase())}
+                className={`text-lg font-semibold ${
+                  activeSection === section.toLowerCase() ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-800'
+                } hover:text-blue-600 transition duration-200 ease-in-out`}
               >
                 {section}
-              </Link>
+              </button>
             </li>
           ))}
         </ul>
