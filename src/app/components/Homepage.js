@@ -54,10 +54,10 @@ const Homepage = () => {
   }, []);
 
   return (
-    <section id="home" className="relative home flex flex-wrap min-h-screen items-start p-20 bg-[#e5ecfb]">
+    <section id="home" className="home flex flex-wrap justify-evenly min-h-screen items-start p-5 bg-[#e5ecfb]">
       <div id="particles-js" className="absolute top-0 left-0 w-full h-full"></div>
 
-      <div className="content flex-1 z-10 m-10 mt-18">
+      <div className="content  z-10 mt-20 md:mt-28">
         <h2 className="font-extrabold text-blue-900 text-4xl mb-4 md:text-5xl ">
           <p className='mb-4'>Hi There,</p>
           I m Saurabh <span className="text-orange-600">Pasi</span>
@@ -65,13 +65,13 @@ const Homepage = () => {
         <p className="text-2xl font-semibold text-black">
           I am into <span className="typing-text text-red-600"></span>
         </p>
-        <Link href="#about" className="btn mt-6 inline-flex items-center py-3 px-6 text-lg font-semibold text-white bg-blue-800 hover:bg-blue-700 rounded-full shadow-md transition-transform transform hover:scale-105">
+        <Link href="#about" className="btn mt-6 inline-flex items-center py-3 px-4 text-lg font-semibold text-white bg-blue-800 hover:bg-blue-700 rounded-full shadow-md transition-transform transform hover:scale-105">
           <span>About Me</span>
           <i className="fas fa-arrow-circle-down ml-2"></i>
         </Link>
 
         <div className="socials mt-12">
-          <ul className="flex space-x-4">
+          <ul className="flex space-x-2">
             <li>
               <Link href="https://www.linkedin.com/in/saurabh-pasi-712702296/" target="_blank" rel="noopener noreferrer">
                 <div className="linkedin flex p-3 bg-gray-900 text-cyan-400 rounded-full hover:bg-blue-600 transition-all hover:text-white">
@@ -111,7 +111,7 @@ const Homepage = () => {
         </div>
       </div>
 
-      <div className="image min-w-80 h-96 z-10 mr-24 mt-16">
+      <div className="image min-w-60 h-96 mt-20 z-10 md:min-w-80 md:mt-28">
         <Image
           src="/profile1.jpg" // Ensure the image is in the public folder
           alt="Profile"

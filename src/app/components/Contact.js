@@ -53,7 +53,7 @@ const Contact = () => {
         Get in <span className="text-purple-800">Touch</span>
       </div>
 
-      <div className="container max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8">
+      <div className="container max-w-[95%] md:max-w-[80%] mx-auto bg-white rounded-2xl shadow-lg p-8">
         <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
           <div className="w-full md:w-1/2 flex justify-center md:justify-start">
             <Image

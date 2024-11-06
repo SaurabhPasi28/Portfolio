@@ -6,7 +6,7 @@ import { FaPhone, FaEnvelope, FaMapMarkedAlt, FaLinkedin, FaGithub, FaTwitter, F
 const Footer = () => {
   return (
     <section className="bg-blue-900">
-      <div className="flex flex-col gap-6 p-4 md:flex-row md:justify-around md:items-start">
+      <div className="flex flex-col gap-6 p-8 md:flex-row md:justify-around md:items-start">
         <div className="flex-1 max-w-[20rem]">
           <h3 className="text-3xl text-white pb-4">Saurabhs Portfolio</h3>
           <p className="text-lg text-gray-300">

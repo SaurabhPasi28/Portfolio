@@ -49,7 +49,7 @@ const Project = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="project-card relative bg-yellow-400 rounded-lg shadow-lg overflow-hidden w-80 transform transition-transform hover:scale-105 group"
+            className="project-card relative bg-yellow-400 rounded-lg shadow-lg overflow-hidden w-80 transform transition-transform hover:scale-105 group sd:w-72"
           >
             {/* Image Container */}
             <div className="relative w-full h-64 overflow-hidden">
