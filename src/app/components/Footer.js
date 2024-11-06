@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link'; // Import Link from Next.js
+import Link from 'next/link';
 import { FaChevronRight } from 'react-icons/fa';
 import { FaPhone, FaEnvelope, FaMapMarkedAlt, FaLinkedin, FaGithub, FaTwitter, FaTelegramPlane } from 'react-icons/fa';
 

@@ -31,10 +31,10 @@ const Education = () => {
           </div>
         </div>
 
-        <div className="box flex flex-col items-center w-[90%] bg-white shadow-md rounded-lg overflow-hidden my-4 transform transition-transform duration-300 hover:scale-105 sm:flex-row sm:w-4/5">
+        <div className="box flex flex-col items-center w-[90%] bg-white shadow-md rounded-lg overflow-hidden my-4 transform transition-transform duration-3000 hover:scale-105 sm:flex-row sm:w-4/5">
           <div className="image flex-shrink-0 w-full sm:w-2/5">
             <Image
-              src="/College.jpg"
+              src="/School.jpg"
               alt="School"
               className="object-cover w-full h-full"
               width={400}

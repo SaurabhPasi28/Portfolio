@@ -33,7 +33,7 @@ const Homepage = () => {
 
     const loadScrollReveal = async () => {
       const ScrollReveal = (await import('scrollreveal')).default;
-      ScrollReveal().reveal('.content', {
+      ScrollReveal().reveal('.content, .image, .form-group, .container, .vertical-timeline-element--work, .project-card', {
         delay: 200,
         distance: '50px',
         origin: 'top',
@@ -41,14 +41,7 @@ const Homepage = () => {
         easing: 'ease-out',
         reset: true,
       });
-      ScrollReveal().reveal('.image', {
-        delay: 300,
-        distance: '50px',
-        origin: 'top',
-        duration: 1000,
-        easing: 'ease-out',
-        reset: true,
-      });
+
     };
     loadScrollReveal();
   }, []);

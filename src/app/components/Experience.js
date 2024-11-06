@@ -1,29 +1,12 @@
 'use client';
-import { useEffect } from 'react';
+import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { FaBriefcase, FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
 
 const Experience = () => {
-  useEffect(() => {
-    const loadScrollReveal = async () => {
-      const ScrollReveal = (await import('scrollreveal')).default;
-
-      ScrollReveal().reveal('.vertical-timeline-element--work', {
-        delay: 200,
-        distance: '50px',
-        origin: 'top',
-        duration: 1000,
-        easing: 'ease-out',
-        interval: 100, 
-        reset: true,
-      });
-    };
-
-    loadScrollReveal();
-  }, []);
-
+  
   return (
     <section id="experience" className="bg-gray-50 py-10">
       <h2 className="text-center text-3xl font-bold text-blue-800 mb-8 flex items-center justify-center gap-3">
@@ -51,7 +34,7 @@ const Experience = () => {
           className="vertical-timeline-element--work"
           contentStyle={{ background: '#DBEAFE', color: '#1E3A8A' }}
           contentArrowStyle={{ borderRight: '7px solid #DBEAFE' }}
-          date="June 2021 - Dec 2021"
+          date="March 2024 - June 2024"
           iconStyle={{ background: '#1E40AF', color: '#FFF' }}
           icon={<FaBriefcase />}
         >

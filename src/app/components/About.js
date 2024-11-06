@@ -1,27 +1,12 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
 import Link from 'next/link';
 import Image from 'next/image';
 
 const About = () => {
-  useEffect(() => {
-    const loadScrollReveal = async () => {
-      const ScrollReveal = (await import('scrollreveal')).default;
-      ScrollReveal().reveal('.about-content, .about-image, .content', {
-        origin: 'top',
-        distance: '60px',
-        duration: 1000,
-        delay: 300,
-        easing: 'ease-in-out',
-        reset: true,
-      });
-    };
-
-    loadScrollReveal();
-  }, []);
 
   return (
     <section id="about" className="about bg-white py-10 px-2">
@@ -30,7 +15,7 @@ const About = () => {
       </h2>
 
       <div className="flex flex-wrap items-center justify-around lg:p-10">
-        <div className="about-image w-full lg:w-1/3 flex justify-center mb-8 lg:mb-8">
+        <div className="image w-full lg:w-1/3 flex justify-center mb-8 lg:mb-8">
           <Image
             src="/profile1.jpg"
             alt="Profile"
@@ -40,7 +25,7 @@ const About = () => {
           />
         </div>
 
-        <div className="about-content max-w-[80%] md:max-w-[65%] lg:w-2/3">
+        <div className="content max-w-[80%] md:max-w-[65%] lg:w-2/3">
           <h3 className="content text-2xl font-semibold text-gray-900 mb-4">I&#39;m Saurabh</h3>
           <span className="content block text-lg text-blue-800 font-semibold mb-4">Full Stack Developer</span>
           <p className="content text-gray-700 mb-6 font-semibold text-justify">

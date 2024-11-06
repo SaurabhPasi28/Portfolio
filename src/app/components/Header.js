@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image'; // Import the Next.js Image component
-import Link from 'next/link'; // Import the Link component from Next.js
+import Image from 'next/image';
+import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faAngleUp } from '@fortawesome/free-solid-svg-icons';
 

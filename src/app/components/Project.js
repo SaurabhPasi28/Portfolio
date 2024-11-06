@@ -33,7 +33,7 @@ const Project = () => {
         origin: 'top',
         duration: 1000,
         easing: 'ease-out',
-        reset: true // For staggered effect
+        reset: true
       });
     };
 

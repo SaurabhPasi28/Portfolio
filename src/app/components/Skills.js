@@ -11,17 +11,34 @@ const Skills = () => {
             .then((data) => setSkills(data));
     }, []);
 
+    useEffect(() => {
+        const loadScrollReveal = async () => {
+          const ScrollReveal = (await import('scrollreveal')).default;
+    
+          ScrollReveal().reveal('.card', {
+            delay: 200,
+            distance: '50px',
+            origin: 'top',
+            duration: 1000,
+            easing: 'ease-out',
+            reset: true
+          });
+        };
+    
+        loadScrollReveal();
+      }, [skills]);
+
     return (
         <section className="skills relative bg-gradient-to-r from-indigo-800 via-purple-700 to-pink-600 py-5" id="skills">
             <h2 className="text-white text-4xl text-center font-bold mb-8">
                 Skills & <span className="text-yellow-300">Abilities</span>
             </h2>
-            <div className="container mx-auto px-6 sm:px-10 md:px-16 lg:px-20 bg-opacity-60 bg-[#fff] rounded-3xl shadow-lg py-8">
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            <div className="mx-auto px-6 sm:px-10 md:px-16 lg:px-20 bg-opacity-60 bg-[#fff] rounded-3xl shadow-lg py-8">
+                <div className=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
                     {skills.map((skill, index) => (
                         <div 
                             key={index} 
-                            className="bar relative group p-4 rounded-lg bg-gradient-to-b text-center overflow-hidden"
+                            className="card bar relative group p-4 rounded-lg bg-gradient-to-b text-center overflow-hidden"
                         >
                             <div className="info flex flex-col items-center gap-2 mt-4">
                                 <Image 
