@@ -9,12 +9,12 @@ import Contact from './components/Contact';
 export default function Home() {
   return (
     <div className="">
-      {/* <Homepage/>
+      <Homepage/>
       <About/>
       <Skills/>
       <Education/>
       <Project/>
-      <Experience/> */}
+      <Experience/>
       <Contact/>
     </div>
   );

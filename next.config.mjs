@@ -12,6 +12,11 @@ const nextConfig = {
                 hostname: 'upload.wikimedia.org',
                 pathname: '/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'seeklogo.com',
+                pathname: '/**',
+            },
         ],
     },
 };

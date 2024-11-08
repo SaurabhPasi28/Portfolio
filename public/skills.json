@@ -35,9 +35,14 @@
         "name": "TailwindCSS",
         "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/48px-Tailwind_CSS_Logo.png"
     },
+    
     {
         "name": "MongoDB",
         "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
+    },
+    {
+        "name": "Postman",
+        "icon": "https://seeklogo.com/images/P/postman-logo-F43375A2EB-seeklogo.com.png"
     },
     {
         "name": "MySQL",
