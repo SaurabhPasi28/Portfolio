@@ -59,9 +59,11 @@ const Project = () => {
                 layout="fill"
                 objectFit="cover"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-70 text-white transition-transform transform translate-y-3/4 group-hover:translate-y-0">
-                <h3 className="text-lg font-semibold text-center bg-yellow-300">{project.name}</h3>
-                <p className="text-sm p-2">{project.desc}</p>
+              <div className='relative border-black transition-all duration-500 hover:bottom-0 bottom-8 h-full'>
+
+              <div className="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-80 text-white transition-transform transform translate-y-full group-hover:translate-y-0 duration-500">
+                <h3 className="text-lg font-semibold text-black text-center h-8 bg-yellow-400">{project.name}</h3>
+                <p className="text-sm text-justify p-2">{project.desc}</p>
                 <div className="flex justify-between">
                   <Link
                     href={project.links.view}
@@ -82,6 +84,7 @@ const Project = () => {
                     <span>Code <i className="fas fa-code"></i></span>
                   </Link>
                 </div>
+              </div>
               </div>
             </div>
           </div>

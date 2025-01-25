@@ -1,32 +1,32 @@
 [
   {
-    "name": "Watch-With-Buddy",
-    "desc": "Fully fledged android CRUD app based on different design patterns. Built using Java, XML, SQLite, Firebase, RoomDB, MVVM.",
-    "image": "/College.jpg",
+    "name": "Mentorship-Program",
+    "desc": "A full-stack web application designed to connect mentors and mentees efficiently. Built using Next.js 15, MongoDB, and Tailwind CSS, the platform features core functionalities like user authentication (signup, login, logout), profile management, and mentorship request handling (send, accept, and decline requests).",
+    "image": "/project_1.png",
     "category": "Web Developement",
     "links": {
-      "view": "",
-      "code": ""
+      "view": "https://mentorship-matching-platform-five.vercel.app/",
+      "code": "https://github.com/SaurabhPasi28/Mentorship-Matching-Platform"
     }
   },
   {
-    "name": "SPPU Engg Prep",
-    "desc": "All in one SPPU Engineering resources. Built using Java, XML and Firebase.",
-    "image": "/College.jpg",
-    "category": "android",
+    "name": "Trailer-Verse",
+    "desc": "Designed and developed TrailerVerse, an innovative platform for browsing and discovering movie trailers. Integrated third-party APIs (e.g., TMDB or YouTube API) to fetch and display dynamic trailer content with seamless user experience by using React.",
+    "image": "/project_2.png",
+    "category": "Web Developement",
     "links": {
-      "view": "",
-      "code": ""
+      "view": "https://trailer-verse.vercel.app/",
+      "code": "https://github.com/SaurabhPasi28/TrailerVerse"
     }
   },
   {
-    "name": "NewsBox Android",
-    "desc": "Native android app built using Java, XML. Retrofit & Glide dependencies. Provides different category news.",
-    "image": "/College.jpg",
-    "category": "android",
+    "name": "Stri-Sakhi",
+    "desc": "Developed Stri-Sakhi, a platform dedicated to providing resources, community support, and empowerment tools for women, leveraging Next.js for scalability and performance",
+    "image": "/project_3.png",
+    "category": "Web Developement",
     "links": {
-      "view": "",
-      "code": ""
+      "view": "https://stri-sakhi.vercel.app/",
+      "code": "https://github.com/SaurabhPasi28/stri-sakhi"
     }
   }
 

@@ -5,7 +5,7 @@ const Education = () => {
   return (
     <section className="education flex flex-col items-center bg-[#e5ecfb] min-h-[80vh] p-4" id="education">
       <h1 className="heading text-3xl text-center font-bold flex items-center justify-center">
-        <i className="fas fa-graduation-cap mr-2"></i> My <span className="text-blue-600">Education</span>
+        <i className="fas fa-graduation-cap mr-2"></i> My <span className="text-blue-600 ml-2">Education</span>
       </h1>
 
       <p className="qoute text-xl text-center font-semibold my-4">

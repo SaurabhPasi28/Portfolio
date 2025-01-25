@@ -69,8 +69,7 @@ const Header = () => {
       </div>
       <nav
         className={`fixed top-16 right-0 h-fit w-fit bg-[#fff] flex items-center justify-center transition-transform duration-300 ease-in-out ${
-          isOpen ? 'translate-x-0' : 'translate-x-full '
-        } md:relative md:translate-x-0 md:flex md:w-auto md:h-auto md:top-0`}
+          isOpen ? 'translate-x-10' : 'translate-x-full '} md:relative md:translate-x-0 md:flex md:w-auto md:h-auto md:top-0`}
       >
         <ul className="flex flex-col p-4 md:flex-row md:space-x-6 md:space-y-0 text-center">
           {['Home', 'About', 'Skills', 'Education', 'Work', 'Experience', 'Contact'].map((section) => (
