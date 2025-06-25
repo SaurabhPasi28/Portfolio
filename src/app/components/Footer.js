@@ -12,7 +12,7 @@ const Footer = () => {
           <p className="text-lg text-gray-300">
             Thank you for visiting my personal portfolio website. Connect with me over socials.
             <br /><br />
-            Keep Rising 🚀. Connect with me over live chat!
+            Keep Rising 🚀
           </p>
         </div>
 

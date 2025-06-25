@@ -57,7 +57,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between md:justify-evenly p-6 h-16 bg-[#fff] shadow-md transition-all duration-200">
       <Link href="/" className="text-xl font-bold text-gray-800 hover:text-orange-500 flex items-center space-x-2 transition duration-200 ease-in-out">
         <div className="w-8 h-8 rounded-full overflow-hidden" >
-          <Image className="rounded-sm" src="/profile1.jpg" alt="Logo" width={32} height={32} />
+          <Image className="rounded-sm" src="/profile3.png" alt="Logo" width={32} height={32} />
         </div>
         <span>Saurabh</span>
       </Link>

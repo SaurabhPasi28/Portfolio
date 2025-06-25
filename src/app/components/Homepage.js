@@ -106,7 +106,7 @@ const Homepage = () => {
 
       <div className="image min-w-60 h-96 mt-20 z-10 md:min-w-80 md:mt-28">
         <Image
-          src="/profile1.jpg"
+          src="/profile3.png"
           alt="Profile"
           className="tilt w-full h-full object-cover rounded-full shadow-lg hover:shadow-2xl transition-shadow"
           width={300}
